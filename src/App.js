@@ -3,25 +3,26 @@ import Overview from './components/Overview.js';
 
 function App() {
   const [tasks, setTasks] = React.useState([])
+  const [items, setItems] = React.useState({})
 
-  function handleSubmit(event){
-    const value = event.target
-    event.preventDefault()
-
-    setTasks(prevTasks => [
-      ...prevTasks, value
-    ])
-
-    return <Overview tasks={tasks}/>
+  function handleChange(event){
+    //setTasks (map over it)
   }
 
+  function handleSubmit(event){
+    console.log(event.target.value)
+    event.preventDefault()
+
+    // setItems
+  }
   return (
     <div>
       <form onSubmit={handleSubmit}>
-        <label for="fname">Add a task</label><br/>
-        <input  type="text" 
-                id="fname" 
+        <input  type="text"
+                id="fname"
                 name="fname"
+                placeholder="entertask"
+                onChange={handleChange}
         /><br/>
 
         <button>Submit</button>
