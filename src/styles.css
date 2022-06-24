@@ -2,3 +2,22 @@
     margin:0;
     padding:0;
 }
+
+main{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#section1{
+    border:2px dashed red;
+}
+
+#section1 form{
+    display:flex;
+    flex-direction: column;
+}
+
+#section2{
+    border:2px dashed blue;
+}
