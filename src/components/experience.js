@@ -1,30 +1,33 @@
-import React from "react"
+// import React from "react"
 
-export default function Experience(){
+// export default function Experience(){
 
-    const [work, setWork]=React.useState(
-        {
-            companyName:"",
-            position:"",
-            summary:"",
-            dateFrom:"",
-            dateUntil:""
-        }
-    )
+//     // const [work, setWork]=React.useState(
+//     //     {
+//     //         companyName:"",
+//     //         position:"",
+//     //         summary:"",
+//     //         dateFrom:"",
+//     //         dateUntil:""
+//     //     }
+//     // )
 
-    const [allWork, setAllWork]=React.useState(
-        []
-    )
+//     // const [allWork, setAllWork]=React.useState(
+//     //     []
+//     // )
 
-    
+//     // function changeWork(event) {
+//     //     setFormData(prevFormData => {
+//     //         return {
+//     //             ...prevFormData,
+//     //             [event.target.name]: event.target.value
+//     //         }
+//     //     })
+//     // }
 
-    function changeWork(event) {
-        setFormData(prevFormData => {
-            return {
-                ...prevFormData,
-                [event.target.name]: event.target.value
-            }
-        })
-    }
-
-}
+//     return(
+//         <form>
+//             <input type="text" />
+//         </form>
+//     )
+// }
