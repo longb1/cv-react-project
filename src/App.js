@@ -1,14 +1,33 @@
 import React from "react";
-import Education from "./components/education.js";
 import Personal from "./components/personal.js";
-import Experience from "./components/experience.js";
 
 function App() {
-  
+    const [cvTemplate, setCvTemplate] = React.useState({
+            name:"",
+            email:"",
+            phone:""
+    })
+
+    function handleChangePersonal(event) {
+        const {name, value}=event.target
+        setCvTemplate(prevData => {
+            return {
+                ...prevData,
+                [name]: value
+            }
+        })
+    }
 
     return(
         <main>
-            <Personal/>
+            <div id="section1">
+                <Personal cvTemplate={cvTemplate} handleChange={handleChangePersonal}/>
+            </div>
+            <div id="section2">
+                <h1>{cvTemplate.name}</h1>
+                <h2>{cvTemplate.email}</h2>
+                <h3>{cvTemplate.phone}</h3>
+            </div>
         </main>
     )
 }
