@@ -1,6 +1,6 @@
 import React from "react";
-import Personal from "./components/personal.js";
-
+import Form from "./components/form.js";
+import Preview from "./components/preview.js";
 function App() {
     const [cvTemplate, setCvTemplate] = React.useState({
             name:"",
@@ -20,17 +20,8 @@ function App() {
 
     return(
         <main>
-            <div id="section1">
-                <Personal cvTemplate={cvTemplate} handleChange={handleChangePersonal}/>
-            </div>
-            <div id="section2">
-                <div id="header">
-                    <h1>{cvTemplate.name}</h1>
-                    <h2>{cvTemplate.email}</h2>
-                    <h3>{cvTemplate.phone}</h3>
-                </div>
-                
-            </div>
+            <Form cvTemplate={cvTemplate} handleChange={handleChangePersonal}/>
+            <Preview cvTemplate={cvTemplate}/>
         </main>
     )
 }

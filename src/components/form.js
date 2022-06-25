@@ -1,11 +1,13 @@
 import React from "react";
+import Personal from "./personal.js";
 
-export default function Form() {
+export default function Form(props) {
   
 
     return(
-        <main>
-        </main>
+        <div id="form">
+                <Personal cvTemplate={props.cvTemplate} handleChange={props.handleChangePersonal}/>
+        </div>
     )
 }
 
