@@ -20,4 +20,15 @@ main{
 
 #section2{
     border:2px dashed blue;
+    display:grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: repeat(5,1fr);
+}
+
+#header{
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    display:flex;
 }

@@ -24,9 +24,12 @@ function App() {
                 <Personal cvTemplate={cvTemplate} handleChange={handleChangePersonal}/>
             </div>
             <div id="section2">
-                <h1>{cvTemplate.name}</h1>
-                <h2>{cvTemplate.email}</h2>
-                <h3>{cvTemplate.phone}</h3>
+                <div id="header">
+                    <h1>{cvTemplate.name}</h1>
+                    <h2>{cvTemplate.email}</h2>
+                    <h3>{cvTemplate.phone}</h3>
+                </div>
+                
             </div>
         </main>
     )
