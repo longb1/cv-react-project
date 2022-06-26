@@ -10,6 +10,12 @@ export default function Preview(props) {
                 <h2>{props.cvTemplate.email}</h2>
                 <h3>{props.cvTemplate.phone}</h3>
             </div>
+            <div id="experience">
+                <h2>{props.cvTemplate.companyName}</h2>
+                <h3>{props.cvTemplate.position}</h3>
+                <h4>{props.cvTemplate.dateFrom} to {props.cvTemplate.dateUntil}</h4>
+                <p>{props.cvTemplate.summary}</p>
+            </div>
         </div>
     )
 }

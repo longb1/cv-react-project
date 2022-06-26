@@ -1,11 +1,17 @@
 import React from "react";
 import Form from "./components/form.js";
 import Preview from "./components/preview.js";
+
 function App() {
     const [cvTemplate, setCvTemplate] = React.useState({
-            name:"",
-            email:"",
-            phone:""
+        name:"",
+        email:"",
+        phone:"",
+        companyName:"",
+        position:"",
+        summary:"",
+        dateFrom:"",
+        dateUntil:""
     })
 
     function handleChangePersonal(event) {
