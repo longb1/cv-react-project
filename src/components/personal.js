@@ -13,17 +13,16 @@ export default function Personal(props){
                 />
                 <input type="email" 
                 name="email"
-                placeholder="name"
+                placeholder="email"
                 onChange={props.handleChange}
                 value={props.cvTemplate.email}
                 />
                 <input type="tel" 
                 name="phone"
-                placeholder="name"
+                placeholder="phone"
                 onChange={props.handleChange}
                 value={props.cvTemplate.phone}
                 />
-                <button>submit</button>
             </form>
         </>
         
