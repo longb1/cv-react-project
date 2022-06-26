@@ -6,8 +6,8 @@ export default function Experience(props){
     //     []
     // )
 
-    // function changeWork(event) {
-    //     setFormData(prevFormData => {
+    // function handleSubmit(event) {
+    //     setAllWork(prevFormData => {
     //         return {
     //             ...prevFormData,
     //             [event.target.name]: event.target.value
@@ -30,7 +30,7 @@ export default function Experience(props){
             onChange={props.handleChange}
             value={props.cvTemplate.position}
             />
-            <input type="text" 
+            <textarea
             name="summary"
             placeholder="summary"
             onChange={props.handleChange}
