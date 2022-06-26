@@ -6,15 +6,15 @@ export default function Preview(props) {
     return(
         <div id="preview">
             <div id="header">
-                <h1>{props.cvTemplate.name}</h1>
-                <h2>{props.cvTemplate.email}</h2>
-                <h3>{props.cvTemplate.phone}</h3>
+                <h1>{props.cvTemplate.personal.name}</h1>
+                <h2>{props.cvTemplate.personal.email}</h2>
+                <h3>{props.cvTemplate.personal.phone}</h3>
             </div>
             <div id="experience">
-                <h2>{props.cvTemplate.companyName}</h2>
-                <h3>{props.cvTemplate.position}</h3>
-                <h4>{props.cvTemplate.dateFrom} to {props.cvTemplate.dateUntil}</h4>
-                <p>{props.cvTemplate.summary}</p>
+                <h2>{props.cvTemplate.experience.companyName}</h2>
+                <h3>{props.cvTemplate.experience.position}</h3>
+                <h4>{props.cvTemplate.experience.dateFrom} to {props.cvTemplate.experience.dateUntil}</h4>
+                <p>{props.cvTemplate.experience.summary}</p>
             </div>
         </div>
     )

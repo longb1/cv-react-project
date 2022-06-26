@@ -4,29 +4,55 @@ import Preview from "./components/preview.js";
 
 function App() {
     const [cvTemplate, setCvTemplate] = React.useState({
-        name:"",
-        email:"",
-        phone:"",
-        companyName:"",
-        position:"",
-        summary:"",
-        dateFrom:"",
-        dateUntil:""
+        personal:{
+            name:"",
+            email:"",
+            phone:""
+        },
+        experience:{
+            companyName:"",
+            position:"",
+            summary:"",
+            dateFrom:"",
+            dateUntil:""
+        }
     })
 
     function handleChangePersonal(event) {
         const {name, value}=event.target
+        
         setCvTemplate(prevData => {
             return {
                 ...prevData,
-                [name]: value
+                personal:{
+                    ...prevData.personal,
+                    [name]: value
+                }
+            }
+        })
+    }
+
+    function handleChangeExperience(event) {
+        const {name, value}=event.target
+        
+        setCvTemplate(prevData => {
+            return {
+                ...prevData,
+                experience:{
+                    ...prevData.experience,
+                    [name]: value
+                }
             }
         })
     }
 
     return(
         <main>
-            <Form cvTemplate={cvTemplate} handleChange={handleChangePersonal}/>
+            <Form 
+                cvTemplate={cvTemplate} 
+                handleChangePersonal={handleChangePersonal}
+                handleChangeExperience={handleChangeExperience}
+            />
             <Preview cvTemplate={cvTemplate}/>
         </main>
     )

@@ -7,22 +7,25 @@ export default function Personal(props){
             <form>
                 <h2>Personal Details</h2>
                 <input type="text" 
+                alt="personal"
                 name="name"
                 placeholder="name"
                 onChange={props.handleChange}
-                value={props.cvTemplate.name}
+                value={props.cvTemplate.personal.name}
                 />
                 <input type="email" 
+                alt="personal"
                 name="email"
                 placeholder="email"
                 onChange={props.handleChange}
-                value={props.cvTemplate.email}
+                value={props.cvTemplate.personal.email}
                 />
                 <input type="tel" 
+                alt="personal"
                 name="phone"
                 placeholder="phone"
                 onChange={props.handleChange}
-                value={props.cvTemplate.phone}
+                value={props.cvTemplate.personal.phone}
                 />
             </form>
         </>

@@ -7,8 +7,8 @@ export default function Form(props) {
 
     return(
         <div id="form">
-            <Personal cvTemplate={props.cvTemplate} handleChange={props.handleChange}/>
-            <Experience  cvTemplate={props.cvTemplate} handleChange={props.handleChange}/>
+            <Personal cvTemplate={props.cvTemplate} handleChange={props.handleChangePersonal}/>
+            <Experience  cvTemplate={props.cvTemplate} handleChange={props.handleChangeExperience}/>
         
         </div>
     )
