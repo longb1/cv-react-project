@@ -17,6 +17,7 @@ export default function Experience(props){
 
     return(
         <form>
+            <h2>Work Experience</h2>
             <input type="text" 
             name="companyName"
             placeholder="company"
@@ -49,6 +50,7 @@ export default function Experience(props){
             onChange={props.handleChange}
             value={props.cvTemplate.dateUntil}
             />
+            <button>add</button>
         </form>
     )
 }

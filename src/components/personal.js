@@ -5,6 +5,7 @@ export default function Personal(props){
     return(
         <>
             <form>
+                <h2>Personal Details</h2>
                 <input type="text" 
                 name="name"
                 placeholder="name"
