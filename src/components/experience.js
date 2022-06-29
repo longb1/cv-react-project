@@ -16,7 +16,7 @@ export default function Experience(props){
     // }
 
     return(
-        <form>
+        <form onSubmit={props.handleSubmit}>
             <h2>Work Experience</h2>
             <input type="text" 
             alt="experience"

@@ -46,12 +46,19 @@ function App() {
         })
     }
 
+    function handleSubmitExperiences(event){
+        event.preventDefault()
+        console.log(event)
+        console.log(cvTemplate.experience)
+    }
+
     return(
         <main>
             <Form 
                 cvTemplate={cvTemplate} 
                 handleChangePersonal={handleChangePersonal}
                 handleChangeExperience={handleChangeExperience}
+                handleSubmitExperience={handleSubmitExperiences}
             />
             <Preview cvTemplate={cvTemplate}/>
         </main>
