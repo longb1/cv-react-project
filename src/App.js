@@ -1,6 +1,7 @@
 import React from "react";
 import Form from "./components/form.js";
 import Preview from "./components/preview.js";
+import uniqid from "uniqid";
 
 function App() {
     const [cvTemplate, setCvTemplate] = React.useState({
@@ -46,10 +47,36 @@ function App() {
         })
     }
 
+    const [currentExperience, setCurrentExperience]=React.setState({
+        id:uniqid(),
+        companyName:"",
+        position:"",
+        summary:"",
+        dateFrom:"",
+        dateUntil:""
+    })
+    const [allExp,setAllExp] = React.useState([])
+
     function handleSubmitExperiences(event){
         event.preventDefault()
-        console.log(event)
-        console.log(cvTemplate.experience)
+
+        const currentInput = cvTemplate.experience
+
+        setCurrentExperience({
+            id:uniqid(),
+            companyName:currentInput.companyName,
+            position:currentInput.position,
+            summary:currentInput.summary,
+            dateFrom:currentInput.dateFrom,
+            dateUntil:currentInput.dateUntil
+        })
+
+
+        setAllExp(
+            (allExp) => {
+                return <li key={task.id}>{task.text}</li>;
+            }
+        )
     }
 
     return(
