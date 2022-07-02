@@ -5,11 +5,11 @@ export default function ExperienceFormSection(props){
     /*
     take all experiences
 
-    loop through each one, generate a list item
+    map it, generate a list item
 
-    append to <ul> in a separate component
+    append to <ul>
     
-    insert into form.js
+    insert into form.js as a component
 
 
     */

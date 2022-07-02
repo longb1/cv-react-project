@@ -47,7 +47,7 @@ function App() {
         })
     }
 
-    const [currentExperience, setCurrentExperience]=React.setState({
+    const [currentExperience, setCurrentExperience]=React.useState({
         id:uniqid(),
         companyName:"",
         position:"",
@@ -71,14 +71,16 @@ function App() {
             dateUntil:currentInput.dateUntil
         })
 
+        console.log(currentExperience)
 
-        setAllExp(
-            (allExp) => {[
-                ...allExp,
+        setAllExp(prevState => ([
+                ...prevState,
                 currentExperience
-            ]}
+            ])
         )
 
+
+        console.log(allExp)
     }
 
     return(

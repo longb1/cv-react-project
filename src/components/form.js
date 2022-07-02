@@ -9,7 +9,7 @@ export default function Form(props) {
     return(
         <div id="form">
             <Personal cvTemplate={props.cvTemplate} handleChange={props.handleChangePersonal}/>
-            <ExperienceFormSection allExperiences={props.allExperiences}/>
+            <ExperienceFormSection allExperiences={props.allExperiences} />
             <Experience  
                 cvTemplate={props.cvTemplate} 
                 handleChange={props.handleChangeExperience}
