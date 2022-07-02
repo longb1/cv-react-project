@@ -73,10 +73,12 @@ function App() {
 
 
         setAllExp(
-            (allExp) => {
-                return <li key={task.id}>{task.text}</li>;
-            }
+            (allExp) => {[
+                ...allExp,
+                currentExperience
+            ]}
         )
+
     }
 
     return(
@@ -86,6 +88,7 @@ function App() {
                 handleChangePersonal={handleChangePersonal}
                 handleChangeExperience={handleChangeExperience}
                 handleSubmitExperience={handleSubmitExperiences}
+                allExperiences={allExp}
             />
             <Preview cvTemplate={cvTemplate}/>
         </main>
