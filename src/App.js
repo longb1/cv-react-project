@@ -47,14 +47,6 @@ function App() {
         })
     }
 
-    const [currentExperience, setCurrentExperience]=React.useState({
-        id:uniqid(),
-        companyName:"",
-        position:"",
-        summary:"",
-        dateFrom:"",
-        dateUntil:""
-    })
     const [allExp,setAllExp] = React.useState([])
 
     function handleSubmitExperiences(event){
@@ -62,27 +54,20 @@ function App() {
 
         const currentInput = cvTemplate.experience
 
-        setCurrentExperience({
-            id:uniqid(),
-            companyName:currentInput.companyName,
-            position:currentInput.position,
-            summary:currentInput.summary,
-            dateFrom:currentInput.dateFrom,
-            dateUntil:currentInput.dateUntil
-        })
-
-        console.log(currentExperience)
-
         setAllExp(prevState => ([
                 ...prevState,
-                currentExperience
+                {
+                    id:uniqid(),
+                    companyName:currentInput.companyName,
+                    position:currentInput.position,
+                    summary:currentInput.summary,
+                    dateFrom:currentInput.dateFrom,
+                    dateUntil:currentInput.dateUntil
+                }
             ])
         )
 
-
-        console.log(allExp)
     }
-
     return(
         <main>
             <Form 
