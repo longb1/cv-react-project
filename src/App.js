@@ -77,7 +77,10 @@ function App() {
                 handleSubmitExperience={handleSubmitExperiences}
                 allExperiences={allExp}
             />
-            <Preview cvTemplate={cvTemplate}/>
+            <Preview 
+                cvTemplate={cvTemplate}
+                allExperiences={allExp}
+            />
         </main>
     )
 }

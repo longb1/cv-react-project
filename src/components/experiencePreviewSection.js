@@ -15,7 +15,7 @@ export default function ExperiencePreviewSection(props){
     })
 
     return(
-        <ul id="formExperiences">
+        <ul id="previewExperiences">
             {formattedExperiences}
         </ul>
 

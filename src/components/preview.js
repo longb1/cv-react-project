@@ -1,5 +1,5 @@
 import React from "react";
-
+import ExperiencePreviewSection from "./experiencePreviewSection.js";
 export default function Preview(props) {
   
 
@@ -10,6 +10,7 @@ export default function Preview(props) {
                 <h2>{props.cvTemplate.personal.email}</h2>
                 <h3>{props.cvTemplate.personal.phone}</h3>
             </div>
+            <ExperiencePreviewSection allExperiences={props.allExperiences} />
             <div id="experience">
                 <h2>{props.cvTemplate.experience.companyName}</h2>
                 <h3>{props.cvTemplate.experience.position}</h3>
