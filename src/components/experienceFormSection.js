@@ -1,4 +1,5 @@
 import React from "react"
+import EditForm from "./editForm.js";
 
 export default function ExperienceFormSection(props){
     const allExp=props.allExperiences
@@ -11,25 +12,10 @@ export default function ExperienceFormSection(props){
             <p>{exp.dateFrom} to {exp.dateUntil}</p>
             <button /*onClick={deleteFunction} */>edit</button>
             <button>remove</button>
+            <EditForm/>
         </li>;
     })
 
-    /*
-    create function in app.js (probably)
-
-    point to id, and delte it within the array
-
-    everything will refresh and you won't get it no more
-
-    for edit... will need a form
-
-    form changes current values of the id
-
-    save will save them
-
-    cancel will not.
-    */
-    
     return(
         <ul id="formExperiences">
             {formattedExperiences}

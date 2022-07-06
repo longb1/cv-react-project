@@ -66,7 +66,22 @@ function App() {
                 }
             ])
         )
+    }
 
+    function handleEditExperience(event){
+        /*
+        point to id, and delte it within the array
+
+        everything will refresh and you won't get it no more
+
+        for edit... will need a form
+
+        form changes current values of the id
+
+        save will save them
+
+        cancel will not.
+        */
     }
     return(
         <main>
