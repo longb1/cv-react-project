@@ -5,12 +5,11 @@ import Personal from "./personal.js";
 
 export default function Form(props) {
   
-
     return(
         <div id="form">
             <Personal cvTemplate={props.cvTemplate} handleChange={props.handleChangePersonal}/>
             <ExperienceFormSection allExperiences={props.allExperiences} />
-            <Experience  
+            <Experience
                 cvTemplate={props.cvTemplate} 
                 handleChange={props.handleChangeExperience}
                 handleSubmit={props.handleSubmitExperience}/>
