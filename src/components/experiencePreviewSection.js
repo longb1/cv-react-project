@@ -9,8 +9,6 @@ export default function ExperiencePreviewSection(props){
             <p>{exp.position}</p>
             <p>{exp.summary}</p>
             <p>{exp.dateFrom} to {exp.dateUntil}</p>
-            <button /*onClick={deleteFunction} */>edit</button>
-            <button>remove</button>
         </li>;
     })
 
