@@ -28,7 +28,7 @@ main{
     border:2px dashed blue;
     display:grid;
     grid-template-columns: 1fr 3fr 1fr;
-    grid-template-rows: 10% repeat(4,1fr);
+    grid-template-rows: 10% auto repeat(3,1fr);
 }
 
 #header{
@@ -66,12 +66,17 @@ main{
     grid-row-start: 2;
     grid-row-end: 3;
 }
-
-#experience{
+#previewExperiences{
     grid-column-start: 1;
     grid-column-end: 4;
     grid-row-start: 2;
     grid-row-end: 3;
+}
+#experience{
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 3;
+    grid-row-end: 4;
     display:grid;
 
     grid-template-columns: 3fr 1fr;
