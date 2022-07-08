@@ -32,7 +32,8 @@ export default function EditForm(props) {
             name="dateUntil"
             placeholder="dateUntil"
             />
-            <button>add</button>
+            <button>save</button>
+            <button>cancel</button>
         </form>
     )
 }
