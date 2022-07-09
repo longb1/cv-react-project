@@ -68,7 +68,9 @@ function App() {
         )
     }
 
-    function handleEditExperience(event){
+    const [editId, setEditID] = React.useState(null)
+
+    function handleEdit(event){
         /*
         point to id, and delte it within the array
 
@@ -89,8 +91,9 @@ function App() {
                 cvTemplate={cvTemplate} 
                 handleChangePersonal={handleChangePersonal}
                 handleChangeExperience={handleChangeExperience}
-                handleSubmitExperience={handleSubmitExperiences}
-                allExperiences={allExp}
+                handleSubmitExperiences={handleSubmitExperiences}
+                allExp={allExp}
+                editId={editId}
             />
             <Preview 
                 cvTemplate={cvTemplate}
