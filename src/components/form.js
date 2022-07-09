@@ -16,7 +16,7 @@ export default function Form(props) {
                     return (
                     <Fragment>
                         {
-                            props.editId === props.allExp.id ? 
+                            props.editId === exp.id ?
                             <EditableForm/>
                             : 
                             <ExperienceFormSection 

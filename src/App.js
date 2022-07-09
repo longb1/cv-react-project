@@ -72,7 +72,7 @@ function App() {
 
     function handleEdit(event, experience){
         event.preventDefault();
-        console.log(experience)
+        setEditID(experience.id)
         /*
         point to id, and delte it within the array
 
@@ -87,6 +87,7 @@ function App() {
         cancel will not.
         */
     }
+
     return(
         <main>
             <Form 
