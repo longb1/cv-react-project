@@ -19,7 +19,10 @@ export default function Form(props) {
                             props.editId === props.allExp.id ? 
                             <EditableForm/>
                             : 
-                            <ExperienceFormSection allExp={exp} />
+                            <ExperienceFormSection 
+                                allExp={exp} 
+                                handleEdit={props.handleEdit}
+                            />
                         }
                     </Fragment>
                     )

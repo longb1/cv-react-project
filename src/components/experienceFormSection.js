@@ -8,7 +8,7 @@ export default function ExperienceFormSection(props){
             <p>{props.allExp.position}</p>
             <p>{props.allExp.summary}</p>
             <p>{props.allExp.dateFrom} to {props.allExp.dateUntil}</p>
-            <button /*onClick={deleteFunction} */>edit</button>
+            <button onClick={(event)=>props.handleEdit(event, props.allExp)}>edit</button>
             <button>remove</button>
         </li>
     )

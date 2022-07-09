@@ -70,7 +70,9 @@ function App() {
 
     const [editId, setEditID] = React.useState(null)
 
-    function handleEdit(event){
+    function handleEdit(event, experience){
+        event.preventDefault();
+        console.log(experience)
         /*
         point to id, and delte it within the array
 
@@ -92,6 +94,7 @@ function App() {
                 handleChangePersonal={handleChangePersonal}
                 handleChangeExperience={handleChangeExperience}
                 handleSubmitExperiences={handleSubmitExperiences}
+                handleEdit={handleEdit}
                 allExp={allExp}
                 editId={editId}
             />
