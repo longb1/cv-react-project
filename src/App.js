@@ -70,16 +70,21 @@ function App() {
 
     const [editId, setEditID] = React.useState(null)
 
-    function handleEdit(event, experience){
+    function handleCancel(event){
         event.preventDefault();
-        setEditID(experience.id)
+        setEditID(null)
     }
 
-    function handleRemove(event, experience){
+    function handleEdit(event, object){
+        event.preventDefault();
+        setEditID(object.id)
+    }
+
+    function handleRemove(event, object){
         event.preventDefault();
         setAllExp(current =>
             current.filter(dontRemove =>{
-                return dontRemove.id !== experience.id;
+                return dontRemove.id !== object.id;
             })
         )
     }
@@ -93,6 +98,7 @@ function App() {
                 handleSubmitExperiences={handleSubmitExperiences}
                 handleEdit={handleEdit}
                 handleRemove={handleRemove}
+                handleCancel={handleCancel}
                 allExp={allExp}
                 editId={editId}
             />

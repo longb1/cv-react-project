@@ -17,7 +17,9 @@ export default function Form(props) {
                     <Fragment>
                         {
                             props.editId === exp.id ?
-                            <EditableForm/>
+                            <EditableForm
+                                handleCancel={props.handleCancel}
+                            />
                             : 
                             <ExperienceFormSection 
                                 allExp={exp} 
