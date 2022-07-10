@@ -22,6 +22,7 @@ export default function Form(props) {
                             <ExperienceFormSection 
                                 allExp={exp} 
                                 handleEdit={props.handleEdit}
+                                handleRemove={props.handleRemove}
                             />
                         }
                     </Fragment>

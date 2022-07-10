@@ -73,19 +73,15 @@ function App() {
     function handleEdit(event, experience){
         event.preventDefault();
         setEditID(experience.id)
-        /*
-        point to id, and delte it within the array
+    }
 
-        everything will refresh and you won't get it no more
-
-        for edit... will need a form
-
-        form changes current values of the id
-
-        save will save them
-
-        cancel will not.
-        */
+    function handleRemove(event, experience){
+        event.preventDefault();
+        setAllExp(current =>
+            current.filter(dontRemove =>{
+                return dontRemove.id !== experience.id;
+            })
+        )
     }
 
     return(
@@ -96,6 +92,7 @@ function App() {
                 handleChangeExperience={handleChangeExperience}
                 handleSubmitExperiences={handleSubmitExperiences}
                 handleEdit={handleEdit}
+                handleRemove={handleRemove}
                 allExp={allExp}
                 editId={editId}
             />
