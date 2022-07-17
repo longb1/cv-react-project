@@ -98,7 +98,7 @@ function App() {
         dateUntil:""
     })
 
-    function handleSaveEdit(event){
+    function handleEditFormChange(event){
         event.preventDefault();
 
         const fieldName = event.target.getAttribute("name");
@@ -108,7 +108,7 @@ function App() {
         newFormData[fieldName]=fieldValue
 
         setEditFormData(newFormData)
-        console.log(`this is the new ${editFormData}`)
+        console.log(`this is the new ${JSON.stringify(editFormData)}`)
     }
 
     return(
@@ -119,7 +119,7 @@ function App() {
                 handleChangeExperience={handleChangeExperience}
                 handleSubmitExperiences={handleSubmitExperiences}
                 handleEdit={handleEdit}
-                handleSaveEdit={handleSaveEdit}
+                handleEditFormChange={handleEditFormChange}
                 handleRemove={handleRemove}
                 handleCancel={handleCancel}
                 allExp={allExp}

@@ -32,7 +32,7 @@ export default function EditableForm(props) {
             name="dateUntil"
             placeholder="dateUntil"
             />
-            <button onClick={(event)=>props.handleSaveEdit(event)}>save</button>
+            <button onClick={(event)=>props.handleEditFormChange(event)}>save</button>
             <button onClick={(event)=>props.handleCancel(event)}>cancel</button>
         </form>
     )

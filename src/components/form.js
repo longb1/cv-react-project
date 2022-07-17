@@ -19,7 +19,7 @@ export default function Form(props) {
                             props.editId === exp.id ?
                             <EditableForm
                                 handleCancel={props.handleCancel}
-                                handleSaveEdit={props.handleSaveEdit}
+                                handleEditFormChange={props.handleEditFormChange}
                             />
                             : 
                             <ExperienceFormSection 
