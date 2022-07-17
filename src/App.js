@@ -78,6 +78,7 @@ function App() {
     function handleEdit(event, object){
         event.preventDefault();
         setEditID(object.id)
+
     }
 
     function handleRemove(event, object){
@@ -87,6 +88,27 @@ function App() {
                 return dontRemove.id !== object.id;
             })
         )
+    }
+
+    const [editFormData, setEditFormData]=React.useState({
+        companyName:"",
+        position:"",
+        summary:"",
+        dateFrom:"",
+        dateUntil:""
+    })
+
+    function handleSaveEdit(event){
+        event.preventDefault();
+
+        const fieldName = event.target.getAttribute("name");
+        const fieldValue = event.target.value;
+
+        const newFormData = {...editFormData};
+        newFormData[fieldName]=fieldValue
+
+        setEditFormData(newFormData)
+        console.log(`this is the new ${editFormData}`)
     }
 
     return(
