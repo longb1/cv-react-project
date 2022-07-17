@@ -119,6 +119,7 @@ function App() {
                 handleChangeExperience={handleChangeExperience}
                 handleSubmitExperiences={handleSubmitExperiences}
                 handleEdit={handleEdit}
+                handleSaveEdit={handleSaveEdit}
                 handleRemove={handleRemove}
                 handleCancel={handleCancel}
                 allExp={allExp}
