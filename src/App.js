@@ -75,11 +75,7 @@ function App() {
         setEditID(null)
     }
 
-    function handleEdit(event, object){
-        event.preventDefault();
-        setEditID(object.id)
-
-    }
+    
 
     function handleRemove(event, object){
         event.preventDefault();
@@ -98,6 +94,21 @@ function App() {
         dateUntil:""
     })
 
+    function handleEdit(event, object){
+        event.preventDefault();
+        setEditID(object.id)
+
+        const formValues ={
+            companyName:object.companyName,
+            position:object.position,
+            summary:object.summary,
+            dateFrom:object.dateFrom,
+            dateUntil:object.dateUntil
+        }
+
+        setEditFormData(formValues)
+    }
+
     function handleEditFormChange(event){
         event.preventDefault();
 
@@ -108,7 +119,6 @@ function App() {
         newFormData[fieldName]=fieldValue
 
         setEditFormData(newFormData)
-        console.log(`this is the new ${JSON.stringify(editFormData)}`)
     }
 
     return(
@@ -124,6 +134,7 @@ function App() {
                 handleCancel={handleCancel}
                 allExp={allExp}
                 editId={editId}
+                editFormData={editFormData}
             />
             <Preview 
                 cvTemplate={cvTemplate}
