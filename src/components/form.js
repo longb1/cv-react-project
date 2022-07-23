@@ -11,6 +11,9 @@ export default function Form(props) {
     return(
         <div id="form">
             
+            
+
+            <Personal cvTemplate={props.cvTemplate} handleChange={props.handleChangePersonal}/>
             <ul id="formExperiences">
                 {props.allExp.map((exp) =>{
                     return (
@@ -34,9 +37,6 @@ export default function Form(props) {
                     )
                 })}
             </ul>
-
-            <Personal cvTemplate={props.cvTemplate} handleChange={props.handleChangePersonal}/>
-            
             <Experience
                 cvTemplate={props.cvTemplate} 
                 handleChange={props.handleChangeExperience}
