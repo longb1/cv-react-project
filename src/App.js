@@ -66,6 +66,19 @@ function App() {
                 }
             ])
         )
+
+        setCvTemplate(prevData => {
+            return {
+                ...prevData,
+                experience:{
+                    companyName:"",
+                    position:"",
+                    summary:"",
+                    dateFrom:"",
+                    dateUntil:""
+                }
+            }
+        })
     }
 
     const [editId, setEditID] = React.useState(null)
