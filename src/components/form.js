@@ -20,6 +20,7 @@ export default function Form(props) {
                             <EditableForm
                                 handleCancel={props.handleCancel}
                                 handleEditFormChange={props.handleEditFormChange}
+                                handleEditFormSubmit={props.handleEditFormSubmit}
                                 editFormData={props.editFormData}
                             />
                             : 

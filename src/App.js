@@ -75,8 +75,6 @@ function App() {
         setEditID(null)
     }
 
-    
-
     function handleRemove(event, object){
         event.preventDefault();
         setAllExp(current =>
@@ -121,6 +119,27 @@ function App() {
         setEditFormData(newFormData)
     }
 
+    function handleEditFormSubmit(event){
+        event.preventDefault();
+
+        const editedExperience ={
+            id:editId,
+            companyName:editFormData.companyName,
+            position:editFormData.position,
+            summary:editFormData.summary,
+            dateFrom:editFormData.dateFrom,
+            dateUntil:editFormData.dateUntil
+        }
+
+        const newExperiences = [...allExp];
+
+        const index = allExp.findIndex((experience)=> experience.id === editedExperience.id)
+
+        newExperiences[index]=editedExperience
+        setAllExp(newExperiences)
+        setEditID(null)
+    }
+
     return(
         <main>
             <Form 
@@ -130,6 +149,7 @@ function App() {
                 handleSubmitExperiences={handleSubmitExperiences}
                 handleEdit={handleEdit}
                 handleEditFormChange={handleEditFormChange}
+                handleEditFormSubmit={handleEditFormSubmit}
                 handleRemove={handleRemove}
                 handleCancel={handleCancel}
                 allExp={allExp}

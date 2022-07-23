@@ -4,7 +4,7 @@ export default function EditableForm(props) {
   
 
     return(
-        <form>
+        <form onSubmit={props.handleEditFormSubmit}>
             <input type="text" 
             alt="experience"
             name="companyName"
