@@ -14,7 +14,7 @@ export default function Form(props) {
             
 
             <Personal cvTemplate={props.cvTemplate} handleChange={props.handleChangePersonal}/>
-            <ul id="formExperiences">
+            <ul id="experienceSummary">
                 {props.allExp.map((exp) =>{
                     return (
                     <Fragment>

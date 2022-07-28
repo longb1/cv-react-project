@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useDeferredValue } from "react";
 import Form from "./components/form.js";
 import Preview from "./components/preview.js";
 import uniqid from "uniqid";
@@ -82,7 +82,13 @@ function App() {
     }
 
     const [editId, setEditID] = React.useState(null)
-
+    const [editFormData, setEditFormData]=React.useState({
+        companyName:"",
+        position:"",
+        summary:"",
+        dateFrom:"",
+        dateUntil:""
+    })
     function handleCancel(event){
         event.preventDefault();
         setEditID(null)
@@ -97,13 +103,9 @@ function App() {
         )
     }
 
-    const [editFormData, setEditFormData]=React.useState({
-        companyName:"",
-        position:"",
-        summary:"",
-        dateFrom:"",
-        dateUntil:""
-    })
+    // create an old details array
+    // make changes to the array directly
+    // if cancelled then put hte old details back
 
     function handleEdit(event, object){
         event.preventDefault();

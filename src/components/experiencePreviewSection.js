@@ -4,18 +4,18 @@ export default function ExperiencePreviewSection(props){
     const allExp=props.allExperiences
 
     const formattedExperiences = allExp.map(exp =>{
-        return <li key={exp.id}>
-            <p>{exp.companyName}</p>
-            <p>{exp.position}</p>
+        return <div className="previewExperiences">
+            <h2>{exp.companyName}</h2>
+            <h3>{exp.position}</h3>
+            <h4>{exp.dateFrom} to {exp.dateUntil}</h4>
             <p>{exp.summary}</p>
-            <p>{exp.dateFrom} to {exp.dateUntil}</p>
-        </li>;
+        </div>;
     })
 
     return(
-        <ul id="previewExperiences">
+        <div id="previewExperienceSummary">
             {formattedExperiences}
-        </ul>
+        </div>
 
     )
 }
