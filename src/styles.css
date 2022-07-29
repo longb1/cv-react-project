@@ -10,7 +10,7 @@ main{
     background-color: lightskyblue;
 }
 
-#form{
+#formSection{
     width:25vw;
     display:flex;
     flex-direction: column;
@@ -18,7 +18,7 @@ main{
     background-color: beige;
 }
 
-#form form{
+#formSection form{
     display:flex;
     flex-direction: column;
 }
