@@ -16,6 +16,13 @@ function App() {
             summary:"",
             dateFrom:"",
             dateUntil:""
+        },
+        education:{
+            companyName:"",
+            position:"",
+            summary:"",
+            dateFrom:"",
+            dateUntil:""
         }
     })
 
