@@ -89,7 +89,7 @@ function App() {
     }
 
     const [editId, setEditID] = React.useState(null)
-    const [editFormData, setEditFormData]=React.useState({
+    const [editFormDataOld, setEditFormDataOld]=React.useState({
         companyName:"",
         position:"",
         summary:"",
@@ -111,10 +111,10 @@ function App() {
     }
 
     // create an old details array
-    // make changes to the array directly
+    // make changes to the allExp array directly
     // if cancelled then put hte old details back
 
-    function handleEdit(event, object){
+    function handleEditExperience(event, object){
         event.preventDefault();
         setEditID(object.id)
 
@@ -126,19 +126,20 @@ function App() {
             dateUntil:object.dateUntil
         }
 
-        setEditFormData(formValues)
+        setEditFormDataOld(formValues)
     }
 
     function handleEditFormChange(event){
         event.preventDefault();
 
-        const fieldName = event.target.getAttribute("name");
-        const fieldValue = event.target.value;
+        const {fieldName, fieldValue}=event.target
 
-        const newFormData = {...editFormData};
-        newFormData[fieldName]=fieldValue
+        const editFormDataNew = {...editFormDataOld};
+        editFormDataNew[fieldName]=fieldValue
 
-        setEditFormData(newFormData)
+        const index = allExp.findIndex((exp)=> exp.id ===editId)
+
+        setAllExp(allExp[index]=editFormDataNew)
     }
 
     function handleEditFormSubmit(event){
@@ -146,11 +147,11 @@ function App() {
 
         const editedExperience ={
             id:editId,
-            companyName:editFormData.companyName,
-            position:editFormData.position,
-            summary:editFormData.summary,
-            dateFrom:editFormData.dateFrom,
-            dateUntil:editFormData.dateUntil
+            companyName:editFormDataOld.companyName,
+            position:editFormDataOld.position,
+            summary:editFormDataOld.summary,
+            dateFrom:editFormDataOld.dateFrom,
+            dateUntil:editFormDataOld.dateUntil
         }
 
         const newExperiences = [...allExp];
@@ -169,14 +170,14 @@ function App() {
                 handleChangePersonal={handleChangePersonal}
                 handleChangeExperience={handleChangeExperience}
                 handleSubmitExperiences={handleSubmitExperiences}
-                handleEdit={handleEdit}
+                handleEdit={handleEditExperience}
                 handleEditFormChange={handleEditFormChange}
                 handleEditFormSubmit={handleEditFormSubmit}
                 handleRemove={handleRemove}
                 handleCancel={handleCancel}
                 allExp={allExp}
                 editId={editId}
-                editFormData={editFormData}
+                editFormDataOld={editFormDataOld}
             />
             <Preview 
                 cvTemplate={cvTemplate}
