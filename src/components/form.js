@@ -1,6 +1,7 @@
 import React, { Fragment } from "react";
 import EditableForm from "./editableForm.js";
 import Experience from "./experienceForm.js";
+import Education from "./educationForm.js"
 import ExperienceFormSection from "./experienceFormSection.js";
 import Personal from "./personal.js";
 
@@ -9,7 +10,7 @@ export default function Form(props) {
     
 
     return(
-        <div id="form">
+        <div id="formSection">
             
             
 
@@ -40,7 +41,9 @@ export default function Form(props) {
             <Experience
                 cvTemplate={props.cvTemplate} 
                 handleChange={props.handleChangeExperience}
-                handleSubmit={props.handleSubmitExperiences}/>
+                handleSubmit={props.handleSubmitExperiences}
+            />
+            <Education/>
         
         </div>
     )
