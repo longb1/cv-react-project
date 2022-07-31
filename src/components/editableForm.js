@@ -10,21 +10,21 @@ export default function EditableForm(props) {
             name="companyName"
             placeholder="company"
             onChange={props.handleEditFormChange}
-            value={props.editFormData.companyName}
+            value={props.editFormDataOld.companyName}
             />
             <input type="text" 
             alt="experience"
             name="position"
             placeholder="position"
             onChange={props.handleEditFormChange}
-            value={props.editFormData.position}
+            value={props.editFormDataOld.position}
             />
             <textarea
             alt="experience"
             name="summary"
             placeholder="summary"
             onChange={props.handleEditFormChange}
-            value={props.editFormData.summary}
+            value={props.editFormDataOld.summary}
             />
             <label htmlFor="dateFrom">work from</label>
             <input type="date" 
@@ -32,7 +32,7 @@ export default function EditableForm(props) {
             name="dateFrom"
             placeholder="dateFrom"
             onChange={props.handleEditFormChange}
-            value={props.editFormData.dateFrom}
+            value={props.editFormDataOld.dateFrom}
             />
             <label htmlFor="dateUntil">work until</label>
             <input type="date" 
@@ -40,7 +40,7 @@ export default function EditableForm(props) {
             name="dateUntil"
             placeholder="dateUntil"
             onChange={props.handleEditFormChange}
-            value={props.editFormData.dateUntil}
+            value={props.editFormDataOld.dateUntil}
             />
             <button>save</button>
             <button onClick={(event)=>props.handleCancel(event)}>cancel</button>

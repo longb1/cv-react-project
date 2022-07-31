@@ -110,10 +110,6 @@ function App() {
         )
     }
 
-    // create an old details array
-    // make changes to the allExp array directly
-    // if cancelled then put hte old details back
-
     function handleEditExperience(event, object){
         event.preventDefault();
         setEditID(object.id)
@@ -137,30 +133,35 @@ function App() {
         const editFormDataNew = {...editFormDataOld};
         editFormDataNew[fieldName]=fieldValue
 
-        const index = allExp.findIndex((exp)=> exp.id ===editId)
+        const index = allExp.findIndex((experience)=> experience.id ===editId)
 
-        setAllExp(allExp[index]=editFormDataNew)
+        const newExperiences = [...allExp];
+
+        newExperiences[index]=editFormDataNew
+
+        setAllExp(...allExp, allExp.[index].[fieldName]=[fieldValue])
     }
 
     function handleEditFormSubmit(event){
         event.preventDefault();
 
-        const editedExperience ={
-            id:editId,
-            companyName:editFormDataOld.companyName,
-            position:editFormDataOld.position,
-            summary:editFormDataOld.summary,
-            dateFrom:editFormDataOld.dateFrom,
-            dateUntil:editFormDataOld.dateUntil
-        }
+        // const editedExperience ={
+        //     id:editId,
+        //     companyName:editFormDataOld.companyName,
+        //     position:editFormDataOld.position,
+        //     summary:editFormDataOld.summary,
+        //     dateFrom:editFormDataOld.dateFrom,
+        //     dateUntil:editFormDataOld.dateUntil
+        // }
 
-        const newExperiences = [...allExp];
+        // const newExperiences = [...allExp];
 
-        const index = allExp.findIndex((experience)=> experience.id === editedExperience.id)
+        // const index = allExp.findIndex((experience)=> experience.id === editedExperience.id)
 
-        newExperiences[index]=editedExperience
-        setAllExp(newExperiences)
+        // newExperiences[index]=editedExperience
+        // setAllExp(newExperiences)
         setEditID(null)
+        setEditFormDataOld(null)
     }
 
     return(

@@ -25,7 +25,7 @@ export default function Form(props) {
                                 handleCancel={props.handleCancel}
                                 handleEditFormChange={props.handleEditFormChange}
                                 handleEditFormSubmit={props.handleEditFormSubmit}
-                                editFormData={props.editFormData}
+                                editFormDataOld={props.editFormDataOld}
                             />
                             : 
                             <ExperienceFormSection 
